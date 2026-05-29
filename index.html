@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimal portfolio for a cloud engineer focused on clean design and thoughtful systems.">
+    <title>Cloud Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="topbar" aria-label="Primary">
+            <a class="brand" href="#top">Portfolio</a>
+            <button class="ghost-button" type="button" id="toggleAccent" aria-pressed="false">Calm mode</button>
+        </nav>
+
+        <div class="hero-copy" id="top">
+            <p class="eyebrow">Cloud Engineer in Training</p>
+            <h1>Quiet, clear infrastructure with a human touch.</h1>
+            <p class="lead">I design reliable cloud systems that stay simple to run, easy to understand, and thoughtful in the details.</p>
+
+            <div class="hero-actions">
+                <a class="primary-button" href="#projects">View work</a>
+                <a class="text-link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="panel intro-card" aria-labelledby="about-title">
+            <div>
+                <p class="section-label">About</p>
+                <h2 id="about-title">I build highly available, secure, and cost-conscious cloud architectures.</h2>
+            </div>
+            <p class="section-text">My focus is practical work: small choices that make systems easier to maintain, faster to ship, and more comfortable to trust.</p>
+        </section>
+
+        <section class="grid" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="section-label">Selected work</p>
+                <h2 id="projects-title">A small set of focused projects.</h2>
+            </div>
+
+            <article class="panel project-card">
+                <p class="project-meta">Live deployment</p>
+                <h3>AWS portfolio site</h3>
+                <p>A minimal static site hosted on S3 and CloudFront with a clean hand-built layout.</p>
+            </article>
+
+            <article class="panel project-card">
+                <p class="project-meta">Automation</p>
+                <h3>Deployment workflow</h3>
+                <p>Simple updates, predictable releases, and a setup that avoids unnecessary complexity.</p>
+            </article>
+
+            <article class="panel project-card">
+                <p class="project-meta">Operations</p>
+                <h3>Observability notes</h3>
+                <p>Practical logging and monitoring habits that help catch issues early without noise.</p>
+            </article>
+        </section>
+
+        <section class="panel status-card" aria-labelledby="status-title">
+            <div>
+                <p class="section-label">Current status</p>
+                <h2 id="status-title">Available for cloud-focused projects and portfolio work.</h2>
+            </div>
+            <p class="status">Live on AWS with a lightweight, self-contained design.</p>
+        </section>
+    </main>
+
+    <section class="contact" id="contact">
+        <p class="section-label">Contact</p>
+        <a class="contact-link" href="mailto:sreecharan831@gmail.com">sreecharan831@gmail.com</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Cloud Portfolio</p>
+    </footer>
+
+    <script>
+        const toggleAccent = document.getElementById('toggleAccent');
+
+        toggleAccent.addEventListener('click', () => {
+            const active = document.body.classList.toggle('accent-on');
+            toggleAccent.setAttribute('aria-pressed', String(active));
+            toggleAccent.textContent = active ? 'Warm mode' : 'Calm mode';
+        });
+    </script>
+</body>
+</html>
